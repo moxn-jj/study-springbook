@@ -5,17 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * DB 커넥션 담당
+ * N 사 전용 DB 커넥션 관리
  */
-public class SimpleConnectionMaker {
+public class NConnectionMaker implements ConnectionMaker {
 
-    /**
-     * DB 커넥션 생성
-     * @return
-     * @throws ClassNotFoundException
-     * @throws SQLException
-     */
-    public Connection makeNewConnection() throws ClassNotFoundException, SQLException {
+    @Override
+    public Connection makeConnection() throws ClassNotFoundException, SQLException {
 
         Class.forName("org.postgresql.Driver");
         Connection c = DriverManager.getConnection("jdbc:postgresql://localhost/springbook", "spring", "1948");

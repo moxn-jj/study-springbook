@@ -5,17 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * N사 전용 UserDao
+ * D 사 전용 DB 커넥션 관리
  */
-public class NUserDao extends UserDao {
+public class DConnectionMaker implements ConnectionMaker {
 
-    /**
-     * N사 만을 위한 DB 커넥션
-     * @return
-     * @throws ClassNotFoundException
-     * @throws SQLException
-     */
-    public Connection getConnection() throws ClassNotFoundException, SQLException {
+    @Override
+    public Connection makeConnection() throws ClassNotFoundException, SQLException {
 
         Class.forName("org.postgresql.Driver");
         Connection c = DriverManager.getConnection("jdbc:postgresql://localhost/springbook", "spring", "1948");

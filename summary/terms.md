@@ -22,4 +22,11 @@
    팩토리 메소드 패턴은 서브클래스에서 오브젝트 생성을 담당하고 리턴한다는 점이 특징이다.
    따라서 두 패턴은 동시에 발생하는 경우가 많다. 
    ```
-7. 
+7. 객체지향 설계 원칙, SOLID: (1.3)
+   - 객체지향 설계를 할 때 지켜야할 원칙
+   1. SRP, THE Single Responsibility Principle: 단일 책임 원칙
+   2. OCP, The Open Closed Principle: 개방 폐쇄 원칙
+   3. LSP, The Liskov Substitution Principle: 리스코프 치환 원칙
+   4. ISP, The Interface Segregation Principle: 인터페이스 분리 원칙
+   5. DIP, The Dependency Inversion Principle: 의존관계 역전 원칙
+8. 
