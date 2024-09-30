@@ -1,5 +1,6 @@
 package springbook.user;
 
+import springbook.user.dao.NUserDao;
 import springbook.user.dao.UserDao;
 import springbook.user.domain.User;
 
@@ -10,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
         // 현재 이 테스트 코드의 문제는 여러번 실행이 불가하다는 점 (key 중복)
-        UserDao dao = new UserDao();
+        UserDao dao = new NUserDao();
 
         User user = new User();
         user.setId("moxn");

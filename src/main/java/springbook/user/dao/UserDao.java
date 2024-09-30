@@ -8,7 +8,7 @@ import java.sql.*;
  * 사용자 정보 관리 DAO
  *
  */
-public class UserDao {
+public abstract class UserDao {
 
     /**
      * 단일 사용자 추가
@@ -60,16 +60,10 @@ public class UserDao {
     }
 
     /**
-     * DB 커넥션 - 관심사의 분리 (1.2)
+     * DB 커넥션
      * @return
      * @throws ClassNotFoundException
      * @throws SQLException
      */
-    private Connection getConnection() throws ClassNotFoundException, SQLException {
-
-        Class.forName("org.postgresql.Driver");
-        Connection c = DriverManager.getConnection("jdbc:postgresql://localhost/springbook", "spring", "1948");
-
-        return c;
-    }
+    public abstract Connection getConnection() throws ClassNotFoundException, SQLException;
 }
