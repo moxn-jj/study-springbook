@@ -1,8 +1,5 @@
-package springbook.user;
+package springbook.user.dao;
 
-import springbook.user.dao.ConnectionMaker;
-import springbook.user.dao.DConnectionMaker;
-import springbook.user.dao.UserDao;
 import springbook.user.domain.User;
 
 import java.sql.SQLException;
@@ -13,8 +10,7 @@ public class UserDaoTest {
 
         // 현재 이 테스트 코드의 문제는 여러번 실행이 불가하다는 점 (key 중복)
 
-        ConnectionMaker connectionMaker = new DConnectionMaker();
-        UserDao dao = new UserDao(connectionMaker);
+        UserDao dao = new DaoFactory().userDao();
 
         User user = new User();
         user.setId("moxn");
