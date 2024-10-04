@@ -29,4 +29,25 @@
    3. LSP, The Liskov Substitution Principle: 리스코프 치환 원칙
    4. ISP, The Interface Segregation Principle: 인터페이스 분리 원칙
    5. DIP, The Dependency Inversion Principle: 의존관계 역전 원칙
-8. 
+8. 빈, Bean: (1.5.3)
+   - == 빈 오브젝트 (Bean Object), 관리되는 오브젝트 (Managed Object)
+   - 스프링이 IoC 방식으로 관리하는 오브젝트
+   - 스프링을 사용하는 애플리케이션에서 만들어지는 모든 오브젝트가 빈은 아니고, 그 중 스프링이 직접 생성과, 제어를 담당하는 오브젝트만을 말함
+9. 빈 팩토리, Bean Factory: (1.5.3) 
+   - 스프링의 IoC를 담당하는 핵심 컨테이너
+   - 빈을 등록, 생성, 조회하며 빈을 관리하는 여러 기능을 담당
+   - 보통 빈 팩토리를 바로 사용하기 보단 확장한 애플리케이션 컨텍스트를 이용
+   - `BeanFactory`라고 붙여쓰면 빈 택토리가 구현하고 있는 가장 기본적인 인터페이스의 이름이 됨
+10. 애플리케이션 컨텍스트, Application Context: (1.5.3)
+    - 빈 팩토리를 확장한 IoC 컨테이너
+    - 빈 팩토리가 하는 기능 + 스프링이 제공하는 각종 부가 서비스
+    - `ApplicationConext`라고 붙여쓰면 애플리케이션 컨텍스트가 구현해야 하는 기본 인터페이스를 말함
+    - `ApplicationConext`는 `BeanFactory`를 상속
+11. 설정정보/설정 메타정보, Configuration metadata: (1.5.3)
+    - == 애플리케이션의 형상 정보, 청사진 (blueprints) 
+    - 애플리케이션 컨텍스트 또는 빈 팩토리가 IoC를 적용하기 위해 사용하는 메타정보
+12. 컨테이너 또는 IoC 컨테이너, Container or IoC Container (1.5.3)
+    - 애플리케이션 컨텍스트나 빈 팩토리의 동의어로, IoC 방식으로 빈을 관리한다는 의미에서 사용
+    - 컨테이너라는 말 자체가 IoC의 개념을 담고 있으나, 애플리케이션 컨텍스트보다는 추상적인 표현
+13. 스프링 프레임워크, Spring Framework (1.5.3)
+    - IoC 컨테이너 ,애플리케이션 컨텍스트를 포함해서 스프링이 제공하는 모든 기능을 통틀어 말함
